@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background-color: rgba(0, 0, 0, 0.655);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.container {
+  width: 70%;
+  margin: 5rem auto;
+}
+.btn {
+  border: 0.2rem solid #071111;
+  background-color: #143333;
+  color: #d3dddd;
+  font-size: 3rem;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  padding: 0.5rem 1rem;
+}
+.btn::after {
+  content: "\00276F";
+  transform: rotate(90deg);
+  justify-self: end;
+}
+.panel {
+  font-size: 1.8rem;
+  color: rgb(31, 31, 31);
+  width: 70%;
+  border-right: 0.2rem solid #071111;
+  border-left: 0.2rem solid #071111;
+  background-color: rgba(0, 255, 255, 0.526);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.panel .paragraph {
+  padding: 1rem 2rem;
+}
+.btn:hover,
+.active {
+  background-color: #071111;
+}
+/* .display {
+} */
+.active::after {
+  transform: rotate(270deg);
+}
